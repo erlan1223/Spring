@@ -17,10 +17,6 @@ public class ProductRepository {
         products.add(new Product(5, "Asus Zenfore 10", 700.0));
     }
 
-    public List<Product> findAll() {
-        return products;
-    }
-
     public Optional<Product> findById(int id) {
         return products.stream().filter(product -> product.getId() == id).findFirst();
     }
